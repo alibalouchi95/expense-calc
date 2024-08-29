@@ -1,2 +1,2 @@
 # expense-calc
-this is a test project for learning HTML, CSS, Javascript
+this is a test project to learn HTML, CSS, Javascript
