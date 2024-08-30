@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Expense Calculator</title>
+   </head>
+   <body>
+      <script>
+
+         function add() {
+            const selectValue = document.getElementById("select-expense");
+            console.log({value: selectValue.value});
+         }
+         function reset() {
+            let balance = 0;
+
+         }
+         function save_balance() {
+
+
+         }
+
+      </script>
+
+
+      <div class="container">
+         <h2>Calculator of Expenses</h2>
+         <hr/>
+         <div class="content">
+            <div class="data">
+               <div class="expenses"></div>
+               <div class="incomes"></div>                  
+            </div>
+            <div class="button-actions">
+               <select id="select-expense">
+                  <option title="income" value="income" style="color: rgb(0, 253, 0);">Income</option>
+                  <option title="expense" value="expense" selected style="color: red;">(Expense)</option>
+               </select>
+               <input class="expense-input"/>
+               <button class="btn" id="add-btn" onclick="add()" >Add</button>
+               <button class="btn" id="add-btn" onclick="reset()" >Reset</button>
+               <button class="btn" id="add-btn" onclick="save_balance()" >Save</button>
+
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
