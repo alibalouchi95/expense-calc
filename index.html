@@ -2,38 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Calculator</title>
 </head>
 
 <body>
 
-    <script>
-        function add() {
-            const selectValue = document.getElementById("select-expense")
-            console.log({ value: selectValue.value })
-        }
-    </script>
+  <script>
+    let balance = 0
 
-    <div class="container">
-        <h2>Expense Calculator</h2>
-        <hr />
-        <div class="content">
-            <div class="data">
-                <div class="expenses"></div>
-                <div class="incomes"></div>
-            </div>
-            <div class="buttom-actions">
-                <select id="select-expense">
-                    <option title="expense" value="expense" selected>- (Expense)</option>
-                    <option title="income" value="income">+ (Income)</option>
-                </select>
-                <input class="expense-input" />
-                <button class="btn" id="add-btn" onclick="add()">Add</button>
-            </div>
-        </div>
+    function add() {
+      const selectElement = document.getElementById("select-expense")
+      const inputElement = document.getElementById("expense-input")
+      const balanceElement = document.getElementById("balance")
+
+      const inputInt = parseInt(inputElement.value)
+      if (inputInt) {
+        if (selectElement.value === "income") {
+          balance += inputInt
+        } else if (selectElement.value === 'expense') {
+          balance -= inputInt
+        }
+      }
+
+      balanceElement.innerText = balance
+    }
+
+    function reset() {
+      balance = 0
+      const balanceElement = document.getElementById("balance")
+      balanceElement.innerText = balance
+    }
+
+    function addRow() {
+      console.log({ balance, selectElement })
+    }
+
+    function checkInput() {
+      const input = document.getElementById("expense-input")
+      if (!input.value) return
+      const int = parseInt(input.value)
+      if (isNaN(int)) {
+        alert("SEGE numberes")
+        input.value = ''
+      }
+    }
+  </script>
+
+  <div class="container">
+    <h2>Expense Calculator</h2>
+    <hr />
+    <div class="content">
+      <div class="data">
+        <div class="expenses"></div>
+        <div class="incomes"></div>
+      </div>
+      <div class="buttom-actions">
+        <select id="select-expense">
+          <option title="expense" value="expense" selected>- (Expense)</option>
+          <option title="income" value="income">+ (Income)</option>
+        </select>
+        <input class="expense-input" id="expense-input" onkeyup="checkInput()" />
+        <button class="btn" id="add-btn" onclick="add()">Add</button>
+        <button class="btn" id="reset-btn" onclick="reset()">Reset</button>
+      </div>
+      <h4>$<p id="balance"></p>
+      </h4>
     </div>
+  </div>
 </body>
 
 </html>
