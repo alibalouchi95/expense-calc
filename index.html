@@ -4,44 +4,55 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Expense Calculator</title>
+      <link rel="stylesheet" href="style.css" type="text/css">
+
    </head>
    <body>
+
       <script>
 
-         function add() {
-            const selectValue = document.getElementById("select-expense");
-            console.log({value: selectValue.value});
+         function addEntry() {
+
          }
 
          function reset() {
-            let balance = 0;
-
-         }
-         
+            
+         } 
       </script>
 
-
       <div class="container">
-         <h2 >Calculator of Expenses</h2>
-         <hr>
-
+         <div class="header">
+            Budget Calculator
+         </div>
          <div class="content" >
-            <div class="data">
-               <div class="expenses"></div>
-               <div class="incomes"></div>                  
-            </div>
             <div class="button-actions">
+
                <select id="select-expense">
-                  <option selected style="display: none;"></option>
-                  <option title="income" value="income" >Income</option>
-                  <option title="expense" value="expense">(Expense)</option>
+                  <option selected ></option>
+                  <option title="expense" value="expense">(-) Expense</option>
+                  <option title="income" value="income" >(+) Income</option>
                </select>
-               <input class="expense-input"/>
+
+               <input id="inputData" placeholder="Enter the amount"/>
+
                <button class="btn" id="add-btn" onclick="add()" >Add</button>
                <button class="btn" id="add-btn" onclick="reset()" >Reset</button>
 
             </div>
+            <div class="balanceMsg">
+               <span>Your current balance is: $ </span>
+               <span id="balance"></span>
+            </div>
+            <div class="data">
+               <div id="incomes" class="incomes">
+                  <p>Incomes</p>
+               </div>
+               <div id="expenses" class="expenses">
+                  <p>Expenses</p>
+               </div>
+            </div>
          </div>
       </div>
+      <div class="box"></div>
    </body>
 </html>
