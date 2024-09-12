@@ -1,0 +1,103 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anta';
+    font-size: 22px;
+}
+
+.container {
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    border: 2px solid black;
+    border-radius: 30px;
+
+}
+
+button, select, option, input {
+    font-family: 'Anta';
+    font-size: 14px;;
+}
+
+
+.header {
+    color: black;
+    font-size: xx-large;
+    padding: 20Px;
+    margin-bottom: 20px;
+    border-bottom: solid black  ;
+}
+
+.balanceMsg {
+    font-size: large;
+    margin-top: 15px;
+}
+
+#balance {
+    font-weight: bold;
+}
+
+.data {
+    padding: 20px 5px 15px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; 
+    align-content: space-between;
+}
+
+.data p {
+    margin-top: 10px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+
+.incomes {
+    background-color: rgba(21, 255, 0, 0.3);
+    min-height: 250px;
+    width: 42.5%;
+    border-radius: 30px;
+    padding-bottom: 15px;
+}
+
+.expenses {
+    background-color: rgba(246, 0, 0, 0.35);
+    min-height: 250px;
+    width: 42.5%;
+    border-radius: 30px;
+    padding-bottom: 15px;
+}
+
+.incomes div, .expenses div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    padding-right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.83);
+    border-radius: 20px;
+    margin: 0px 10px;
+    font-size: 14px; 
+    font-weight: 620;
+    margin-top: 5px;
+}
+
+
+.item-date {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px !important; 
+    border: none !important;
+
+}
+
+.item-time {
+    border: none ;
+    font-size: 10px; 
+    color: rgb(0, 0, 0);
+}
