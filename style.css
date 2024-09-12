@@ -40,13 +40,12 @@ button, select, option, input {
 }
 
 .data {
-    padding-top: 20px;
-    padding-bottom: 25px;
+    padding: 20px 5px 15px 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start; 
     align-content: space-between;
 }
 
@@ -58,17 +57,47 @@ button, select, option, input {
 
 
 .incomes {
-    background-color: rgba(250, 39, 39, 0.53);
+    background-color: rgba(21, 255, 0, 0.3);
     min-height: 250px;
     width: 42.5%;
     border-radius: 30px;
+    padding-bottom: 15px;
 }
 
 .expenses {
-    background-color: rgba(102, 250, 89, 0.762);
+    background-color: rgba(246, 0, 0, 0.35);
     min-height: 250px;
     width: 42.5%;
     border-radius: 30px;
+    padding-bottom: 15px;
+}
+
+.incomes div, .expenses div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    padding-right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.83);
+    border-radius: 20px;
+    margin: 0px 10px;
+    font-size: 14px; 
+    font-weight: 620;
+    margin-top: 5px;
 }
 
 
+.item-date {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px !important; 
+    border: none !important;
+
+}
+
+.item-time {
+    border: none ;
+    font-size: 10px; 
+    color: rgb(0, 0, 0);
+}
