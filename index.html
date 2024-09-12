@@ -5,58 +5,23 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Expense Calculator</title>
       <link rel="stylesheet" href="style.css" type="text/css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-
+      <script src="script.js"></script>
    </head>
+
    <body>
-
-      <script>
-         let balance = 0;
-
-         function add() {
-
-            let addButton = document.getElementById('add-btn');
-            let inputType = document.querySelector('#inputType').value;
-            let inputValue = document.getElementById('amount').value;
-            let inputNumber = Number (inputValue);
-            
-            if (inputType == "income") {
-               balance += inputNumber;
-               document.getElementById('balance').innerHTML = balance;
-               document.getElementById('amount').value = "";
-            } 
-            else {
-               balance -= inputNumber;
-               document.getElementById('balance').innerHTML = balance;
-               document.getElementById('amount').value = "";
-            }
-         }
-
-         function reset() {
-            balance = 0;
-            document.getElementById('balance').innerText = balance;
-            console.log(balance)
-         }
-
-      </script>
-
       <div class="container">
          <div class="header">
             Budget Calculator
          </div>
          <div class="content" >
             <div class="button-actions">
-
                <select id="inputType">
                   <option title="expense" value="expense">(-) Expense</option>
                   <option title="income" value="income" >(+) Income</option>
                </select>
-
                <input id="amount" placeholder="Enter the amount"/>
-
                <button class="btn" id="add-btn" onclick="add()" >Add</button>
-               <button class="btn" id="add-btn" onclick="reset()" >Reset</button>
-
+               <button class="btn" id="reset-btn" onclick="reset()" >Reset</button>
             </div>
             <div class="balanceMsg">
                <span>Your current balance is: $ </span>
